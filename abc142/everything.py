@@ -11,8 +11,8 @@ for m in range(M):
     cm = list(map(int, input().split()))
     c.append(cm)
 
-x = range(N)
-
-for L in range(0, len(x)+1):
-        for subset in itertools.permutations(x, L):
-                print(subset)
+digits = len(format(2 ** N - 1, 'b'))
+for i in range(2 ** N):
+    use = format(i, 'b').zfill(digits)
+    boxes = set(aa if use[for j in a)
+    print(boxes)
