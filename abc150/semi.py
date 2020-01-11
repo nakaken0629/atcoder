@@ -8,6 +8,18 @@ def lcm(values):
         ans = ans * values[i] // gcd(ans, values[i])
     return ans
 
+def count_div2(value):
+    count = 0
+    while value % 2 == 0:
+        count += 1
+        value //= 2
+    return count
+
 min_value = lcm(A)
 amount = M * 2 // min_value
-print((amount + 1) // 2)
+
+div2 = count_div2(A[0])
+if any([count_div2(a) != div2 for a in A]):
+    print(0)
+else:
+    print((amount + 1) // 2)
